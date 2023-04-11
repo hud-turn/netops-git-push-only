@@ -19,5 +19,5 @@ with open('targets.csv', 'r') as csvfile:
         ##stdin, stdout, stderr = ssh.exec_command(cmd0)
         stdin, stdout, stderr = ssh.exec_command(cmd1)
         output = stdout.readlines()
-        write_list_to_file(output, 'test.txt')
+        write_list_to_file(output, ipaddress + '.txt')
         ssh.close()
