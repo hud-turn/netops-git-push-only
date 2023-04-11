@@ -1,0 +1,15 @@
+import paramiko, requests, json, os, csv
+from dotenv import load_dotenv
+
+
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect('IP address', username='username', password='password')
+
+stdin, stdout, stderr = ssh.exec_command('show running-config')
+output = stdout.readlines()
+
+with open('output.txt', 'w') as f:
+    f.writelines(output)
+
+ssh.close()
