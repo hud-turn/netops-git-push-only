@@ -4,3 +4,4 @@
 
 # Excluding Target List
 *.csv
+.csv
