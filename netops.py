@@ -16,7 +16,6 @@ with open('targets.csv', 'r') as csvfile:
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         load_dotenv()
         ssh.connect(ipaddress, username = os.getenv('USERNAME'), password = os.getenv('PASSWORD'))
-        ##stdin, stdout, stderr = ssh.exec_command(cmd0)
         stdin, stdout, stderr = ssh.exec_command(cmd1)
         output = stdout.readlines()
         write_list_to_file(output, ipaddress + '.txt')
