@@ -3,4 +3,4 @@
 .env.test
 
 # Excluding Target List
-.csv
+*.csv
