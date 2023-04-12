@@ -1,1 +1,1 @@
-# netdevops-git-push-only
+# netops-git-push-only
