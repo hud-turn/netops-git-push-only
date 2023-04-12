@@ -6,17 +6,21 @@ def write_list_to_file(lst, filename):
         for item in lst:
             f.write("%s\n" % item.strip())
 
-cmd0 = "terminal length 0"
+##cmd0 = "terminal length 0"
 cmd1 = "show running-config"
 ssh = paramiko.SSHClient()
-with open('targets.csv', 'r') as csvfile:
-    reader = csv.reader(csvfile)
+with open('targets.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     for row in reader:
-        ipaddress = row[0]
-        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        load_dotenv()
-        ssh.connect(ipaddress, username = os.getenv('USERNAME'), password = os.getenv('PASSWORD'))
-        stdin, stdout, stderr = ssh.exec_command(cmd1)
-        output = stdout.readlines()
-        write_list_to_file(output, ipaddress + '.config')
-        ssh.close()
+        for ipaddress in row:
+            ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            load_dotenv()
+            print(ipaddress)
+            try:
+                ssh.connect(ipaddress, username = os.getenv('USERNAME'), password = os.getenv('PASSWORD'))
+                stdin, stdout, stderr = ssh.exec_command(cmd1)
+                output = stdout.readlines()
+                write_list_to_file(output, ipaddress + '.config')
+                ssh.close()
+            except:
+                print("Unable to connect to ssh connection")
