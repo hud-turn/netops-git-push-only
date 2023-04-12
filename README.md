@@ -1,1 +1,1 @@
-# netdevops-git-pull-only
+# netdevops-git-push-only
