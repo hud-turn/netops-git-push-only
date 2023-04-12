@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 def write_list_to_file(lst, filename):
     with open(filename, 'w') as f:
         for item in lst:
-            f.write("%s" % item)
+            f.write("%s\n" % item.strip())
 
 cmd0 = "terminal length 0"
 cmd1 = "show running-config"
@@ -18,5 +18,5 @@ with open('targets.csv', 'r') as csvfile:
         ssh.connect(ipaddress, username = os.getenv('USERNAME'), password = os.getenv('PASSWORD'))
         stdin, stdout, stderr = ssh.exec_command(cmd1)
         output = stdout.readlines()
-        write_list_to_file(output, ipaddress + '.txt')
+        write_list_to_file(output, ipaddress + '.config')
         ssh.close()
