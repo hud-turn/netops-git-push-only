@@ -26,7 +26,6 @@ ssh = paramiko.SSHClient()
 load_dotenv()
 
 #Defining SSH commands
-cmd0 = "terminal length 0"
 cmd1 = "show running-config"
 
 with open('targets.csv', newline='') as csvfile:
