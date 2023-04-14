@@ -87,7 +87,6 @@ with open('targets.csv', newline='') as csvfile:
                     })
             response = requests.post(tree_url, json=tree_data, auth=HTTPBasicAuth(github_username, github_token))
             tree_sha = response.json()["sha"]
-            print("here")
             # Create a new commit object with the new tree object
             commit_url = f"https://api.github.com/repos/{repository_owner}/{repository_name}/git/commits"
             commit_data = {
@@ -97,7 +96,6 @@ with open('targets.csv', newline='') as csvfile:
             }
             response = requests.post(commit_url, json=commit_data, auth=HTTPBasicAuth(github_username, github_token))
             commit_sha = response.json()["sha"]
-            print("here1")
             # Update the branch reference to point to the new commit object
             ref_url = f"https://api.github.com/repos/{repository_owner}/{repository_name}/git/refs/heads/{branch_name}"
             ref_data = {
