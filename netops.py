@@ -56,8 +56,8 @@ with open('targets.csv', newline='') as csvfile:
         # Replace the branch name with your branch name
         branch_name = os.getenv('BRANCH')
         # Replace the commit message with your commit message
-        commit_message = ("test")
-        ##print(type(datetime.now.strftime("%I:%M%p on %B %d, %Y")))
+        now =datetime.now()
+        commit_message = now.strftime("%I:%M%p on %B %d, %Y")
         # Replace the GitHub username with your username
         github_username = os.getenv('GITHUBUSERNAME')
         # Replace the GitHub personal access token with your personal access token
@@ -77,7 +77,7 @@ with open('targets.csv', newline='') as csvfile:
                 file_path = os.path.join(root, file)
                 with open(file_path, "rb") as f:
                     file_content = f.read()
-                    file_content_base64 = base64.b64encode(file_content).decode("utf-8")
+                    file_content_base64 = file_content.decode("utf-8")
                     tree_data["tree"].append({
                     "path": os.path.relpath(file_path, directory_path),
                     "mode": "100644",

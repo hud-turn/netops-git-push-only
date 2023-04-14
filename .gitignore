@@ -5,3 +5,7 @@
 # Excluding Target List
 *.csv
 .csv
+
+#Excluding .config files generated during testing
+*.config
+.config
