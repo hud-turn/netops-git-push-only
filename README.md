@@ -13,8 +13,8 @@
    + You can also create a local account on the Cisco appliance which also works if you don't want to go through the hassle of setting up a AAA server.
    
 ```
-CISCOUSERNAME = "admin"
-CISCOPASSWORD = "password"
+CISCOUSERNAME = "{your admin account}"
+CISCOPASSWORD = "{your adming account password}"
 
 GITHUBREPOOWNER = "{The username that is listed in the GitHub URL}"
 GITHUBREPONAME = "{the repo you want to push to}"
