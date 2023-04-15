@@ -6,8 +6,7 @@
    + You will also want to to add the credentials used to connect and push configuration files to an online git repository.  
 2. The second file that is required is a targets.csv file, as it currently stands you will need to delineate your SSH targets.  
    + The targets.csv file must contain a list of ip addresses delimited by a comma without a space. 
-   + The contents of the file would look like this for example:
-   
+   + The contents of the file would look like this for example:  
    ```192.168.1.1,192.168.1.2,192.168.1.3,192.168.1.4```
  
 ### Environmental File Contents
