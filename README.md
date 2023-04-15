@@ -5,7 +5,9 @@
    + You will need to create an .env that stores the credentials used to connect to a Cisco SSH instance.  
    + You will also want to to add the credentials used to connect and push configuration files to an online git repository.  
 2. The second file that is required is a targets.csv file, as it currently stands you will need to delineate your SSH targets.  
-   + The targets.csv file must contain a list of ip addresses delimited by a comma without a space (for example "192.168.1.1,192.168.1.2"). 
+   + The targets.csv file must contain a list of ip addresses delimited by a comma without a space. 
+   + The contents of the file would look like this for example:
+   ```192.168.1.1,192.168.1.2,192.168.1.3,192.168.1.4```
  
 ### Environmental File Contents
 1. You will likely want to start off with a unique Cisco Username and Password for this project. Preferably a credential that has read access only to prevent damage if the system that this script is running on is compromised in some form or fashion.
