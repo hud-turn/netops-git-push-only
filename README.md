@@ -14,7 +14,7 @@
    
 ```
 CISCOUSERNAME = "{your admin account}"
-CISCOPASSWORD = "{your adming account password}"
+CISCOPASSWORD = "{your admin account password}"
 
 GITHUBREPOOWNER = "{The username that is listed in the GitHub URL}"
 GITHUBREPONAME = "{the repo you want to push to}"
