@@ -7,7 +7,7 @@
 2. The second file that is required is a targets.csv file, as it currently stands you will need to delineate your SSH targets.  
    + The targets.csv file must contain a list of ip addresses delimited by a comma without a space (for example "192.168.1.1,192.168.1.2").  
 ###Environmental File Contents
-`
+   `
 CISCOUSERNAME = "admin"
 CISCOPASSWORD = "password"
 
@@ -15,4 +15,4 @@ GITHUBREPOOWNER = "{The username that is listed in the GitHub URL}"
 GITHUBREPONAME = "{the repo you want to push to}"
 BRANCH = "{the branch you want to push to}"
 GITHUBUSERNAME = "{the GitHub account that will be pushing code}"
-GITHUBACCESSTOKEN = "{You will need to generate a GitHub access token to insert here}"`
+GITHUBACCESSTOKEN = "{You will need to generate a GitHub access token to insert here}"`  
