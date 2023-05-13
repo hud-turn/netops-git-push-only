@@ -1,6 +1,5 @@
-import paramiko, requests, json, os, csv, requests, base64
+import paramiko, requests, os, csv, requests, sys
 from dotenv import load_dotenv
-from github import Github
 from datetime import datetime
 from requests.auth import HTTPBasicAuth
 
@@ -105,5 +104,4 @@ with open('targets.csv', newline='', encoding = "utf-8") as csvfile:
             print("Files pushed to GitHub successfully!")
         except:
             print("Push to Github was unsuccessful")
-
-    
+sys.exit(0)    
