@@ -15,7 +15,7 @@ if not os.path.exists(subdirectory_path):
 ##constructors
 def write_list_to_file(lst, filename):
     file_path = os.path.join(subdirectory_path,filename)
-    with open(file_path, 'w') as f:
+    with open(file_path, 'w' , encoding = "utf-8") as f:
         for item in lst:
             f.write("%s\n" % item.strip())
 
@@ -28,7 +28,7 @@ load_dotenv()
 #Defining SSH commands
 cmd1 = "show running-config"
 
-with open('targets.csv', newline='') as csvfile:
+with open('targets.csv', newline='', encoding = "utf-8") as csvfile:
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     for row in reader:
         for ipaddress in row:
