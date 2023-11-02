@@ -1,1 +1,4 @@
 paramiko
+python-dotenv
+PyGithub
+git-all
