@@ -11,7 +11,7 @@ The first file is a .env file that will store credentials for this program.
    ```192.168.1.1,192.168.1.2,192.168.1.3,192.168.1.4```
  
 ### Environmental File Contents
-1. You will likely want to start off with a unique Cisco Username and Password for this project. Preferably a credential that has read access only to prevent damage if the system that this script is running on is compromised in some form or fashion.
+1. You will likely want to start off with a unique Cisco Username and Password for this project. Preferably a credential that has read access only to prevent damage if the system that this script is running on is compromised in some form or fashion. You can set this by creating a priviledge level that only has access to certain commands and you can tailor your service account permissions
    + You can either use a AAA server like RADIUS to help disseminate the credentials.
    + You can also create a local account on the Cisco appliance which also works if you don't want to go through the hassle of setting up a AAA server.  
 ```
@@ -24,3 +24,7 @@ BRANCH = "{the branch you want to push to}"
 GITHUBUSERNAME = "{the GitHub account that will be pushing code}"
 GITHUBACCESSTOKEN = "{You will need to generate a GitHub access token to insert here}"
 ```
+
+### Output
+1. Once you have successuflly designated target IPs, and if the script can connect to an SSH server then it will create configuration files in the configs_dir directory.
+2. From here we will run Git so that it can compare changes and it will push it to the remote repo
