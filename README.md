@@ -12,7 +12,7 @@ The first file is a .env file that will store credentials for this program.
  
 ### Environmental File Contents
 1. You will likely want to start off with a unique Cisco Username and Password for this project. Preferably a credential that has read access only to prevent damage if the system that this script is running on is compromised in some form or fashion. You can set this by creating a priviledge level that only has access to certain commands and you can tailor your service account permissions
-   + You can either use a AAA server like RADIUS to help disseminate the credentials.
+   + You can either use a AAA server like TACACS to help disseminate the credentials.
    + You can also create a local account on the Cisco appliance which also works if you don't want to go through the hassle of setting up a AAA server.  
 ```
 CISCOUSERNAME = "{your admin account}"
