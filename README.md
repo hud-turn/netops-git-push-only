@@ -26,5 +26,5 @@ GITHUBACCESSTOKEN = "{You will need to generate a GitHub access token to insert 
 ```
 
 ### Output
-1. Once you have successuflly designated target IPs, and if the script can connect to an SSH server then it will create configuration files in the configs_dir directory.
-2. From here we will run Git so that it can compare changes and it will push it to the remote repo
+1. Once you have successfully designated target IPs, and if the script can connect to an SSH server then it will create configuration files in a configs_dir directory.
+2. From here we will run Git so that it can compare changes in the files and it will push it to the remote repo.
