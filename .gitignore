@@ -9,3 +9,6 @@
 #Excluding .config files generated during testing
 *.config
 .config
+
+# Excluding Venv
+venv/
