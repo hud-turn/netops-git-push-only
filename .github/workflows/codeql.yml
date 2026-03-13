@@ -21,8 +21,6 @@ jobs:
 
       - uses: github/codeql-action/init@v3
         with:
-          languages:
-            - python
-            - actions
+          languages: python, actions
 
       - uses: github/codeql-action/analyze@v3
