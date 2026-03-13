@@ -8,6 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4"
+packaging = "<24"
 paramiko = "^3.4.0"
 python-dotenv = "^1.0.1"
 PyGithub = "^2.1.1"
