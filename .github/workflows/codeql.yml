@@ -2,10 +2,11 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    # Optional: include target branches you use
-    branches: [ "main" ]
+    branches:
+      - main
 
 permissions:
   security-events: write
@@ -16,13 +17,12 @@ jobs:
     name: Analyze with CodeQL
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
+      - uses: github/codeql-action/init@v3
         with:
-          languages: ['python', 'actions']  # <-- include what you need
+          languages:
+            - python
+            - actions
 
-      - name: Perform CodeQL analysis
-        uses: github/codeql-action/analyze@v3
+      - uses: github/codeql-action/analyze@v3
